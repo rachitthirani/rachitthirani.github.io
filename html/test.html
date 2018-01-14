@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<script src="js/portfolio.js"></script>
-<title>Rachit Thirani's WebPage</title>
+<script src="../js/portfolio.js"></script>
 
 <script>
 var tab =angular.module('TabsApp', []);
@@ -124,8 +122,8 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
 	}
 
     ];
-    $scope.image="images/me.jpg";
-    $scope.tab=0;
+    $scope.image="../images/me.jpg";
+    $scope.tab=1;
 }]);
 </script>
 </head>
@@ -140,12 +138,12 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
                 ng-class="{active:isActiveTab(tab.url)}" 
                 ng-click="onClickTab(tab)">{{tab.name}}</li>
         </ul>
-        <div class="mainView" >
+        <div id="mainView" >
             <div ng-include="currentTab"></div>
         </div>
     </div>
     <script type="text/ng-template" id="home.html">
-		<div ng-init="image='images/me.jpg'" class="Welcome">
+		<div ng-init="image='../images/me.jpg'" class="Welcome">
 			<img ng-src="{{image}}" alt="Rachit Thirani">
 			<div>
 			<h1>Hi. I am Rachit Thirani</h1>
@@ -187,7 +185,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
 				<li>Specialized developer in Front-End domain for several multi-million dollar clients.</li>
 				<li>Developed and tested responsive components with cross browser compatibility for client’s webpages.</li>
 				<li>Reduced the maintenance effort required by automation of CSS for all clients’s modules using GRUNT and LESS</li>
-				<li>Managed Front-End developers as Track Lead and Point of Contact for all front end development</li>
+				<li>Managed Front-End developers as Track Lead and POC for all development</li>
 				<li>Additional Technologies Used - HTML5, AJAX, Javascript, JQuery, Bootstrap, NodeJS, AngularJS, CSS3</li>
 			</ul>
 		</div>
@@ -195,10 +193,12 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
 	
 	<script type="text/ng-template" id="projects.html">
 		<div id="viewThree">
+			<h1>projects</h1>
+			<p>machine learning</p>
 		</div>
 
 		<div ng-app="projectsApp">
-    		<div class="projects" ng-controller="projectsCtrl">
+    		<div id="pro" ng-controller="projectsCtrl">
         	<!--<ul>
         			<li ng-repeat="cat in projects">{{cat.cate_name}}
         				<ul>
@@ -206,41 +206,30 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
             			</ul>
             		</li>
         		</ul>-->
-        	<div class="projecttabs"> 
+        	<div> 
         		<ul class="tabbedview">
         			<li ng-class="{active:tab==0}">
                         <a href ng-click="tab = tab==0 ? null : 0">All</a>
                     </li>
-        			<li ng-class="{active:tab==1"> 
-      					<a href ng-click="tab = tab==1 ? null : 1">Data Science</a>     
-   			 		</li>
-   			 		<li ng-class="{active:tab==2"> 
-      					<a href ng-click="tab = tab==2 ? null : 2">Operating Systems</a>     
+        			<li ng-repeat="cat in projects" ng-class="{active:tab=={{cat.index}}}"> 
+      					<a href ng-click="tab = tab=={{cat.index}} ? null : {{cat.index}}">{{cat.cate_name}}</a>     
    			 		</li> 
-   			 		<li ng-class="{active:tab==3"> 
-      					<a href ng-click="tab = tab==3 ? null : 3">Data Bases</a>     
-   			 		</li> 
-   			 		<li ng-class="{active:tab==4"> 
-      					<a href ng-click="tab = tab==4 ? null : 4">Web Services</a>     
-   			 		</li>  
         		</ul>
-        		<section ng-show="tab === 0"> 
-        				<section ng-repeat="cat in projects">
-        					<h3>{{cat.cate_name}}</h3>
-        					<section ng-repeat="pro in cat.pro" >
-        						<h4>{{pro.name}}</h4>
-        						<p>{{pro.desc}}</p>
-        						<a>{{pro.url}}</a>
-        					</section>
-            			</section>
+        		<section ng-show="tab === 0"> {{cat.cate_name}}
+        			<ul>
+        				<li ng-repeat="cat in projects">{{cat.cate_name}}
+        					<ul>
+            					<li ng-repeat="pro in cat.pro" >{{pro.name}}<p>{{pro.desc}}</p><a>{{pro.url}}</a></li>
+            				</ul>
+            			</li>
+        			</ul>
         	
         		</section> 
-        		<section ng-repeat="cat in projects" ng-show="tab === {{cat.index}}">
-        			<section ng-repeat="pro in cat.pro" >
-        				<h4>{{pro.name}}</h4>
-        				<p>{{pro.desc}}</p>
-        				<a>{{pro.url}}</a>
-        			</section>
+        		<section ng-repeat="cat in projects" ng-show="tab === {{cat.index}}"> {{cat.cate_name}}
+        			<p ng-repeat="pro in cat.pro" >{{pro.name}}
+        			<span>{{pro.desc}}</span>
+        			<a>{{pro.url}}</a>
+        			</p>
         		</section>           
        		 </div>
         </div>
@@ -251,10 +240,10 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
 		<div class="contactme" background="connect_background.jpg">
 			<h1>contact me</h1>
 			<div>
-			<a href="https://www.facebook.com/rachit.thirani"><img src="images/fb.png"></a>
-			<a href="https://www.linkedin.com/in/rachitthirani/"><img src="images/linkedin.png"></a>
-			<a href="mailto:rachitthirani@yahoo.com"><img src="images/email.png"></a>
-			<a href="tel:+19197716184"><img src="images/phone.jpg"</a>
+			<a href="https://www.facebook.com/rachit.thirani"><img src="../images/fb.png"></a>
+			<a href="https://www.linkedin.com/in/rachitthirani/"><img src="../images/linkedin.png"></a>
+			<a href="mailto:rachitthirani@yahoo.com"><img src="../images/email.png"></a>
+			<a href="tel:+19197716184"><img src="../images/phone.jpg"</a>
 			<div>
 		</div>
 	</script>
