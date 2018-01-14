@@ -101,6 +101,7 @@ overflow: hidden;
 .projecttabs > section {
     position: relative;
     top: 60px;
+    margin: 40px;
 }
 
 .tabs >ul li:hover{
