@@ -82,17 +82,17 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
     	pro:[{
             	name: "Non Persistent Heap",
             	desc: "Developed an in-memory kernel module, that provides efficient data sharing among different processes, in C which maps kernel space memory into user space memory using the user-space library interface and signs the requested size memory , specified by the offset, in kernel using the offset. Lock and unlock functions were implemented using the user space library to guarantee only one process can access an object at the same time leveraging the shared  memory policy.",
-            	url: "abc.html"
+            	url: "https://github.com/rachitthirani/NPheap"
         	}, 
         	{
             	name: "Transactional Non Persistent Heap" ,
             	desc: "Designed a kernel module in C which utilizes the concept of concurrency without locking. Version number is maintained for the object and a transaction is allowed to commit only if the version number is the same, i.e. no other transactions has changed the value. If the transaction cannot commit, it is aborted and restarted.",
-            	url: "abc.html"
+            	url: "https://github.com/rachitthirani/TNPHeap"
         	}, 
         	{	
 				name: "Non Persistent Heap File System",
 				desc:"Implemented a File System in C using the Fuse library and previously developed NPHeap kernel module. The file system is compatible with conventional file system operations. Data structures and operations that maintain the abstraction of a file system were implemented, with persistent data storage capabilities.",
-            	url: "abc.html"
+            	url: "https://github.com/rachitthirani/CSC-501-NPHFS"
 			}]
 	},
 	{	cate_name:"Database",
@@ -159,22 +159,29 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
 	
 	<script type="text/ng-template" id="aboutme.html">
 		<div class="aboutMe">
-			<p>  My name is Rachit Thirani. I am a passionate Software Developer with expertise in Full Stack Web Development and Data Analysis. Programming and computers facinated me since my childhood. My parents wanted to provide me with somethings which there were not lucky enough to use in their generation and this hooked me up to amazing world of computers.
-            </p>
-            <p> I did my Bachelors from Manipal University in Information Technology. which can be considered as my first formal introduciton to high level programming concepts and skills. the courses which i took kepy my passion growing and the hunger to learn more never kept on growing.
-                <section>
-                    Course work: Object Oriented Programming, Data Structures, Computer Networks, Software Engineering
-                </section>
+			<p> 
+				My name is Rachit Thirani. I am a passionate Software Developer with expertise in Full Stack Web Development and Data Analysis. Programming and computers facinated me since my childhood. My parents wanted to provide me with somethings which there were not lucky enough to use in their generation and this hooked me up to amazing world of computers.
             </p>
             <p>
-                New place, new university, new course work didtnt hold me back form achieving my dream and I came to the United States to achieve this dream. I graduated with Masters in Computer Science from North Carolina State University in December, 2017, with expertise in Data Science.
-                <seciton>
-                    CourseWork: Algorithms, Operating Systems, Automated Learning and Data Analysis, Algorithms for Data Guided Business Intelligence, Database Management System, Foundations of Data Science, Data Intensive Computing, Artificial Intelligence, Advance Data Structures, Graph Data Mining
-                </section>
-                </p>
-                 <p>I have broad experience across a wide spectrum of software programming languages,technology stacks, databases and tools.</p>
-                 <p>TO know more about my experience please switch to the experience tab</p>
+               I did my Bachelors from Manipal University in Information Technology. which can be considered as my first formal introduciton to high level programming concepts and skills. the courses which i took kepy my passion growing and the hunger to learn more never kept on growing. 
+  	            
+  	            <seciton>
+                    Course work: Object Oriented Programming, Data Structures, Computer Networks, Software Engineering
+                </section> 
+
             </p>
+           
+            <p>
+                New place, new university, new course work didtnt hold me back form achieving my dream and I came to the United States to achieve this dream. I graduated with Masters in Computer Science from North Carolina State University in December 2017, with expertise in Data Science.
+  	            
+  	            <seciton>
+                    CourseWork: Algorithms, Operating Systems, Automated Learning and Data Analysis, Algorithms for Data Guided Business Intelligence, Database Management System, Foundations of Data Science, Data Intensive Computing, Artificial Intelligence, Advance Data Structures, Graph Data Mining
+                </section> 
+
+            </p>
+            <p>I have broad experience across a wide spectrum of software programming languages,technology stacks, databases and tools.</p>
+            <p>TO know more about my experience please switch to the experience tab</p>
+            
             
 		</div>
 	</script>
@@ -202,7 +209,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
         	<!--<ul>
         			<li ng-repeat="cat in projects">{{cat.cate_name}}
         				<ul>
-            				<li ng-repeat="pro in cat.pro" >{{pro.name}}<p>{{pro.desc}}</p><a>{{pro.url}}</a></li>
+            				<li ng-repeat="pro in cat.pro" >{{pro.name}}<p>{{pro.desc}}</p><a href="{{pro.url}}" target="_blank">{{pro.url}}</a></li>
             			</ul>
             		</li>
         		</ul>-->
@@ -230,7 +237,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
         					<section ng-repeat="pro in cat.pro" >
         						<h4>{{pro.name}}</h4>
         						<p>{{pro.desc}}</p>
-        						<a>{{pro.url}}</a>
+        						<a href="{{pro.url}}" target="_blank">{{pro.url}}</a>
         					</section>
             			</section>
         	
@@ -239,7 +246,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
         			<section ng-repeat="pro in cat.pro" >
         				<h4>{{pro.name}}</h4>
         				<p>{{pro.desc}}</p>
-        				<a>{{pro.url}}</a>
+        				<a href="{{pro.url}}" target="_blank">{{pro.url}}</a>
         			</section>
         		</section>           
        		 </div>

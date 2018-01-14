@@ -71,6 +71,10 @@ overflow: hidden;
 	padding	   :  20px 40px;
 
 }
+.aboutMe >p seciton {
+    display: block;
+    padding-top: 20px;
+}
 .experience >p {
 	text-align :  center;
 	font-size  :  20px;
