@@ -75,6 +75,13 @@ overflow: hidden;
     display: block;
     padding-top: 20px;
 }
+
+.aboutMe >p img {
+	width: 105px;
+    float: left;
+    padding: 20px
+}
+
 .experience >p {
 	text-align :  center;
 	font-size  :  20px;
@@ -85,6 +92,10 @@ overflow: hidden;
 	font-size  :  18px;
 	padding	   :  5px;
 	margin-left: 30px;
+}
+.experience img {
+	float:right;
+	margin-top:-50px;
 }
 
 .projecttabs > section {
