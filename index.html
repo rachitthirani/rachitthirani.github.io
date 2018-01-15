@@ -19,18 +19,23 @@ tab.controller('TabsCtrl', ['$scope', function ($scope,$http) {
         }, 
         {
             name: "Experience",
-            index:1,
+            index:2,
             url: "experience.html"
         }, 
+        {
+        	name:"Skills",
+        	index:3,
+        	url"skills.html"
+        },
         {	
 			name:"Projects",
-			index:3,
+			index:4,
 			url :"projects.html"
 		},
 
 		{	
 			name:"Contact Me",
-			index:4,
+			index:5,
 			url :"contactme.html"
 		}
     ];
@@ -138,6 +143,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
     $scope.image="images/me.jpg";
     $scope.tab=0;
 }]);
+
 </script>
 </head>
 <body >
@@ -192,7 +198,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
                 </section> 
 
             </p>
-            <p>I have broad experience across a wide spectrum of software programming languages,technology stacks, databases and tools.</p>
+            
             <p>TO know more about my experience please switch to the experience tab</p>
             
             
@@ -224,6 +230,19 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
 			</ul>
 			<p> Technologies used were Python and R </p>
 		</div>
+	</script>
+	<script type="text/ng-template" id="skills.html">
+		<div class="skills" ng-controller="skillsCtrl">
+			<p>I have broad experience across a wide spectrum of software programming languages,technology stacks, databases and tools.</p>
+			<div class="skills">
+				<ol>
+        			<li ng-repeat="ski in skills">{{ski.skill_name}}
+        				<ul>
+            				<li ng-repeat="skil in ski.skill" >{{skil.name}}</li>
+            			</ul>
+            		</li>
+        		</ol>-
+			</div>
 	</script>
 	
 	<script type="text/ng-template" id="projects.html">

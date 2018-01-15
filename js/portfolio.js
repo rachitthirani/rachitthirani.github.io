@@ -9,8 +9,13 @@ tab.controller('TabsCtrl', ['$scope', function ($scope,$http) {
         }, 
         {
             name: "Experience",
-            index:1,
+            index:2,
             url: "experience.html"
+        },
+        {   
+            name:"Skills",
+            index:3,
+            url :"skills.html"
         }, 
         {	
 			name:"Projects",
@@ -112,6 +117,144 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
 			url:"abc.html",
 		}]
 	}
+
+    ];
+    $scope.image="../images/me.jpg";
+    $scope.tab=1;
+}]);
+
+tab.controller('skillsCtrl', ['$scope', function ($scope,$http)
+{
+        $scope.skills = [
+        {
+            skill_name:"Computer Languages",
+        index:1,
+        skill:[{
+                name: "C"
+            }, 
+            {
+                name: "C++"
+            }, 
+            {   
+                name: "Python"
+            },
+            {   
+                name: "Java"
+            },
+            {   
+                name: "C#"
+            },
+            {
+                name: "Perl"
+            }
+            ]
+    },
+    {   skill_name:"Data Science",
+        index:2,
+        skill:[{
+                name: "R"
+            }, 
+            {
+                name: "SQL"
+            }, 
+            {   
+                name: "Apache Kafka"
+            },
+            {   
+                name: "Doc2Vec"
+            },
+            {   
+                name: "NetworkX"
+            },
+            {
+                name: "Numpy"
+            },
+            {
+                name:"Scipy"
+            },
+            {
+                name:"Pandas"
+            },
+            {
+                name:"Mathplotlib"
+            },
+            {
+                name:"NLTK"
+            },
+            {
+                name:"Scikit-Learn"
+            }
+            ]
+    },
+    {   skill_name:"Web Developement",
+        index:3,
+        skill:[{
+                name: "HTML"
+            }, 
+            {
+                name: "CSS"
+            }, 
+            {   
+                name: "JavaScript"
+            },
+            {   
+                name: "Jquery"
+            },
+            {   
+                name: "BootStrap"
+            },
+            {
+                name: "LESS"
+            },
+            {
+                name:"AJAX"
+            },
+            {
+                name:"NodeJS"
+            },
+            {
+                name:"AngularJS"
+            },
+            {
+                name:"ReactJS"
+            },
+            {
+                name:"HandleBars"
+            }
+            ]
+    },
+    {
+        skill_name:"Web Services",
+        index:4,
+        skill:[{
+                name: "AWS"
+            }, 
+            {
+                name: "DynamoDB"
+            }, 
+            {   
+                name: "Map Reduce"
+            },
+            {   
+                name: "Distributed Systems"
+            },
+            {   
+                name: "Kinesis"
+            },
+            {
+                name: "Pig"
+            },
+            {
+                name:"HIVE"
+            },
+            {
+                name:"Hadoop"
+            },
+            {
+                name:"Amazon EC2"
+            }
+            ]
+    }
 
     ];
     $scope.image="../images/me.jpg";
