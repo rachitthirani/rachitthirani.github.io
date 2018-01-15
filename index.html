@@ -54,8 +54,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
     	pro:[{
             	name: "IMDb Rating and Gross Income Prediction",
             	desc: "Developed a tool for cleaning of IMDb’s data and prediction of rating for upcoming movies based on the attributes like actor’s rating, director’s rating, genre using machine learning techniques such as Decision tree, K means Clustering and Neural Networks.",
-            	tech : "R,Decision Tree, Kmeans, CLustering",
-            	url: "unavailable"
+            	tech : "R,Decision Tree, Kmeans, CLustering"
         	}, 
         	{
             	name: "Bitcoin Price Variation Prediction",
@@ -112,20 +111,17 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
     	pro:[{
             	name: "Course Registration System",
             	desc: "Developed an application for managing course registration, financial details, administrator functionalities while utilizing the concepts of relational databases using Java and Oracle with extensive use of procedures and triggers.",
-            	tech : "Java, SQL",
-            	url: "unavailabe"
+            	tech : "Java, SQL"
         	}, 
         	{
             	name: "Paperless Hospital Management System" ,
             	desc: "Developed an application for managinng the functionalities of Hospital without the use of paper. The application give the ability to patient, doctors, the pharmacy and diagnostic center to access data. Users could access their medical records whenever they want. Doctors coudl easily look up at the patient's previous records to provide the perfect treatement. Doctors can even access the patients medical records, prescriptions and all the scan details can be added by the diadnostuc center to the patient's account directly, reducing the need of carrying th reports and prescriptions. ",
-            	tech : "Java, SQL",
-            	url: "unavailable"
+            	tech : "Java, SQL"
         	}, 
         	{	
 				name: "Library Management System",
 				desc:"Developed an application to manage the functionalities of library such as book lending,book availability, reminders for due dates, finincials. Library Staff and users can login and utilize the system to efficiently manage the functionalities of the library",
-				tech :"C#, SQL",
-            	url: "unavailable"
+				tech :"C#, SQL"
 			}]
 	},
 	{
@@ -226,7 +222,8 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
         	<!--<ul>
         			<li ng-repeat="cat in projects">{{cat.cate_name}}
         				<ul>
-            				<li ng-repeat="pro in cat.pro" >{{pro.name}}<p>{{pro.desc}}</p><a href="{{pro.url}}" target="_blank">{{pro.url}}</a></li>
+            				<li ng-repeat="pro in cat.pro" >{{pro.name}}<p>{{pro.desc}}</p>
+            				<a href="{{pro.url}}" ng-if="pro.url" target="_blank">{{pro.url}}</a></li>
             			</ul>
             		</li>
         		</ul>-->
@@ -254,7 +251,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
         					<section ng-repeat="pro in cat.pro" >
         						<h4>{{pro.name}}</h4>
         						<p>{{pro.desc}}</p>
-        						<a href="{{pro.url}}" target="_blank">{{pro.url}}</a>
+        						<a href="{{pro.url}}" ng-if="pro.url" target="_blank">{{pro.url}}</a>
         					</section>
             			</section>
         	
@@ -263,7 +260,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
         			<section ng-repeat="pro in cat.pro" >
         				<h4>{{pro.name}}</h4>
         				<p>{{pro.desc}}</p>
-        				<a href="{{pro.url}}" target="_blank">{{pro.url}}</a>
+        				<a href="{{pro.url}}" ng-if="pro.url" target="_blank">{{pro.url}}</a>
         			</section>
         		</section>           
        		 </div>
