@@ -65,6 +65,27 @@ overflow: hidden;
     margin: 40px 80px;
     transition: color 0.3s linear;
 }
+.aboutMe:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+	background-image: url(../images/aboutme.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    display: block;
+    width: 100%;
+    height: 100%;
+ 
+}
+.aboutMe {
+		    position: relative;
+    	top: -20px;
+    color: whitesmoke;
+      
+}
 .aboutMe >p {
 	text-align :  center;
 	font-size  :  20px;
@@ -81,7 +102,24 @@ overflow: hidden;
     float: left;
     padding: 20px
 }
-
+.experience:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+	background-image: url(../images/experience.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    display: block;
+    width: 100%;
+    height: 100%;
+ 
+}
+.experience{
+	color: snow;
+}
 .experience >p {
 	text-align :  center;
 	font-size  :  20px;
@@ -94,8 +132,8 @@ overflow: hidden;
 	margin-left: 30px;
 }
 .experience img {
-	float:right;
-	margin-top:-50px;
+	display: block;
+    margin: 20px auto;
 }
 
 .projecttabs > section {
@@ -140,6 +178,7 @@ border-bottom: 2px solid white;
 }
 ul.tabbedview li >a{
 text-decoration: none;
+color: cornflowerblue;
 }
 ul.tabbedview li:hover{
 	border-bottom: 2px solid black;
@@ -151,18 +190,63 @@ ul.tabbedview li:hover{
 .projects h3
 {
 	text-align: center;
+	color: skyblue;
+}
+
+.projecttabs {
+	    color: antiquewhite;
+}
+.projecttabs a{
+	color:snow;
+}
+.projecttabs h4 {
+	color:azure;
+}
+.projecttabs:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+	background-image: url(../images/projects.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    display: block;
+    width: 100%;
+    height: 100%;
+ 
 }
 
 
+.contactme:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+	background-image: url(../images/contactme.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    display: block;
+    width: 100%;
+    height: 100%;
+ 
+}
 
-
+.contactme h1{
+	text-align: center;
+    padding-top: 40px;
+        color: dodgerblue;
+}
 .contactme div {
 	text-align: center;
 }
 .contactme div a >img{
   border-radius: 60px;
   transition:border-radius .5s ease-out;
-  width:250px;
+  width:150px;
   padding:20px;
 }
 .contactme div a >img:hover{
