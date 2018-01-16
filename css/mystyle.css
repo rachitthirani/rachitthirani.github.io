@@ -31,13 +31,15 @@ background-color: white;
 overflow: hidden;
 }
 .tabs >ul li {
-	display: inline;;
+	display: inline-block;
 	font-size: 30px;
 	color:black;
-	margin:40px;
+	margin:30px;
+  margin-top:0px;
+  margin-bottom:0px;
 	border:2px solid white;
 	transition: border 1s cubic-bezier(0.17, .67, 0.83, .67);
-	transition: color 1s cubic-bezier(0.17, .67, 0.83, .67);
+	transition: all 1s linear;
 
 
 }
@@ -182,6 +184,7 @@ overflow: hidden;
 .tabs >ul li.ng-binding.ng-scope.active {
     color: red;
     text-decoration: none;
+        transform: translateY(-10px);
         transition: all 1s cubic-bezier(0.17, .67, 0.83, .67);
 }
 
