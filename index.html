@@ -97,15 +97,15 @@
 	<script type="text/ng-template" id="skills.html">
 		<div class="skills" ng-controller="skillsCtrl">
 			<p>I have broad experience across a wide spectrum of software programming languages,technology stacks, databases and tools.</p>
-			<div class="skills">
-				<ol>
-        			<li ng-repeat="ski in skills">{{ski.skill_name}}
-        				<ul>
-            				<li ng-repeat="skil in ski.skill" >{{skil.name}}</li>
-            			</ul>
-            		</li>
-        		</ol>-
-			</div>
+			<ol>
+        	<li ng-repeat="ski in skills">{{ski.skill_name}}
+        		<ul>
+            		<li ng-repeat="skil in ski.skill" >{{skil.name}}</li>
+            </ul>
+          </li>
+      </ol>
+      <a href="documents/resume.pdf" download class="download">Download Resume</a>
+		</div>
 	</script>
 	
 	<script type="text/ng-template" id="projects.html">
@@ -165,9 +165,9 @@
 		<div class="contactme" background="connect_background.jpg">
 			<h1>Lets Connect!!</h1>
 			<div>
-			<a href="https://www.facebook.com/rachit.thirani"><img src="images/fb.png"></a>
-			<a href="https://www.linkedin.com/in/rachitthirani/"><img src="images/linkedin.png"></a>
-			<a href="mailto:rachitthirani@yahoo.com"><img src="images/email.png"></a>
+			<a href="https://www.facebook.com/rachit.thirani" target="_blank"><img src="images/fb.png"></a>
+			<a href="https://www.linkedin.com/in/rachitthirani/" target="_blank"><img src="images/linkedin.png"></a>
+			<a href="mailto:rachitthirani@yahoo.com"><img src="images/email.png" ></a>
 			<a href="tel:+19197716184"><img src="images/phone.jpg"</a>
 			<div>
 		</div>
