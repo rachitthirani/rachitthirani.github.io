@@ -5,33 +5,33 @@ tab.controller('TabsCtrl', ['$scope', function ($scope,$http) {
     	{
             name: "About Me",
             index:1,
-            url: "aboutme.html"
+            url: "html/aboutme.html"
         }, 
         {
             name: "Experience",
             index:2,
-            url: "experience.html"
+            url: "html/experience.html"
         },
         {   
             name:"Skills",
             index:3,
-            url :"skills.html"
+            url :"html/skills.html"
         }, 
         {	
 			name:"Projects",
 			index:3,
-			url :"projects.html"
+			url :"html/projects.html"
 		},
 
 		{	
 			name:"Contact Me",
 			index:4,
-			url :"contactme.html"
+			url :"html/contactme.html"
 		}
     ];
 
 
-    $scope.currentTab = 'home.html';
+    $scope.currentTab = 'html/home.html';
 
     $scope.onClickTab = function (tab) {
         $scope.currentTab = tab.url;
