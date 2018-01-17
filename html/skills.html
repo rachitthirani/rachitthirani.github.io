@@ -1,0 +1,12 @@
+
+        <div class="skills" ng-controller="skillsCtrl">
+            <p>I have broad experience across a wide spectrum of software programming languages,technology stacks, databases and tools.</p>
+            <ol>
+            <li ng-repeat="ski in skills">{{ski.skill_name}}
+                <ul>
+                    <li ng-repeat="skil in ski.skill" >{{skil.name}}</li>
+            </ul>
+          </li>
+      </ol>
+      <a href="documents/Rachit_Rthirani_Resume.pdf" download class="download">Download Resume</a>
+        </div>

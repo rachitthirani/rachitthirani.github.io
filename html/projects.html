@@ -1,0 +1,48 @@
+            <div class="projects" ng-controller="projectsCtrl">
+            <!--<ul>
+                    <li ng-repeat="cat in projects">{{cat.cate_name}}
+                        <ul>
+                            <li ng-repeat="pro in cat.pro" >{{pro.name}}<p>{{pro.desc}}</p>
+                            <a href="{{pro.url}}" ng-if="pro.url" target="_blank">{{pro.url}}</a></li>
+                        </ul>
+                    </li>
+                </ul>-->
+            <div class="projecttabs"> 
+                <ul class="tabbedview">
+                    <li ng-class="{active:tab==0}">
+                        <a href ng-click="tab = tab==0 ? null : 0">All</a>
+                    </li>
+                    <li ng-class="{active:tab==1}"> 
+                        <a href ng-click="tab = tab==1 ? null : 1">Data Science</a>     
+                    </li>
+                    <li ng-class="{active:tab==2}"> 
+                        <a href ng-click="tab = tab==2 ? null : 2">Operating Systems</a>     
+                    </li> 
+                    <li ng-class="{active:tab==3}"> 
+                        <a href ng-click="tab = tab==3 ? null : 3">Data Bases</a>     
+                    </li> 
+                    <li ng-class="{active:tab==4}"> 
+                        <a href ng-click="tab = tab==4 ? null : 4">Web Services</a>     
+                    </li>  
+                </ul>
+                <section ng-show="tab === 0"> 
+                        <section ng-repeat="cat in projects">
+                            <h3>{{cat.cate_name}}</h3>
+                            <section ng-repeat="pro in cat.pro" >
+                                <h4>{{pro.name}}</h4>
+                                <p>{{pro.desc}}</p>
+                                <a href="{{pro.url}}" ng-if="pro.url" target="_blank">{{pro.url}}</a>
+                            </section>
+                        </section>
+            
+                </section> 
+                <section ng-repeat="cat in projects" ng-show="tab === {{cat.index}}">
+                    <section ng-repeat="pro in cat.pro" >
+                        <h4>{{pro.name}}</h4>
+                        <p>{{pro.desc}}</p>
+                        <a href="{{pro.url}}" ng-if="pro.url" target="_blank">{{pro.url}}</a>
+                    </section>
+                </section>           
+             </div>
+
+         </div>

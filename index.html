@@ -10,169 +10,23 @@
 
 </head>
 <body >
-	<header>Anyone can write code that a computer can understand. Good programmers write code that humans can understand.</header>
-	<div class="logo">this will be the logo</div>
+  <header>Anyone can write code that a computer can understand. Good programmers write code that humans can understand.</header>
+  <div class="logo">this will be the logo</div>
 
-<div ng-app="TabsApp">
-    <div class="tabs" ng-controller="TabsCtrl">
+<div ng-app="TabsApp" ng-controller="TabsCtrl">
+    <div class="tabs" >
         <ul>
             <li ng-repeat="tab in tabs" 
                 ng-class="{active:isActiveTab(tab.url)}" 
                 ng-click="onClickTab(tab)">{{tab.name}}</li>
         </ul>
-        <div class="mainView" >
-            <div ng-include="currentTab"></div>
-        </div>
+    </div> 
+    <div class="mainView">
+        <div ng-include="currentTab"></div>
     </div>
-    <script type="text/ng-template" id="home.html">
-		<div ng-init="image='images/me.jpg'" class="Welcome">
-			<img ng-src="{{image}}" alt="Rachit Thirani">
-			<div>
-			<h1>Hi. I am Rachit Thirani</h1>
-			<h2>Master Of Computer Science</h2>
-			<h2>Bachelor Of Engineering - Information and Communication Technology</h2>
-			<p>Thank you for visiting rachitthirani.github.io</p>
-      <p>I am a computer science enthousias interested in Data Science, Artificial Intelligense, Web Developement and Back End Developement. I want to make computers smarter and useful in solving daily problems and help us humans in a smarter way. You can find the list of the projects which I have worked on in the porjects tab. I am actively looking for job opportunities with organizations who can leverage my skills and experience and at the same time provide me with a challenge. My other interests include public speaking, coding and [xyz]. Offline I am great company to hang out, with my hobbies rangining from playing chess, travelling, working out, photography and a lot more.</p>
-			<p>Select any tab to know about me and my skills</p>
-			</div>
-		</div>
-	</script>
-	
-	<script type="text/ng-template" id="aboutme.html">
-		<div class="aboutMe" ng-style="{ 'background-image': images/aboutme.jpg}">
-			<p> 
-				My name is Rachit Thirani. I am a passionate Software Developer with expertise in Full Stack Web Development and Data Analysis. Programming and computers facinated me since my childhood. My parents wanted to provide me with something which they were not lucky enough to use in their generation and this hooked me up to amazing world of computers.
-            </p>
-            <p>
-               I did my Bachelors from Manipal University in Information Technology, which can be considered as my first formal introduciton to high level programming concepts and skills. The courses which I took kept my passion growing and the hunger to learn more never stopped on growing. 
-  	            <img ng-src="images/manipal.jpg">
-  	            <seciton>
-                    Course work: Object Oriented Programming, Data Structures, Computer Networks, Software Engineering.
-                </section> 
-
-            </p>
-           
-            <p>
-                New place, new university, new course work did not hold me back form achieving my dream and I came to the United States to achieve this dream.</p>
-
-            <p> I graduated with Masters in Computer Science from North Carolina State University in December 2017, with expertise in Data Science.
-  	            <img ng-src="images/ncsu.png">
-  	            <seciton>
-                    CourseWork: Algorithms, Operating Systems, Automated Learning and Data Analysis, Algorithms for Data Guided Business Intelligence, Database Management System, Foundations of Data Science, Data Intensive Computing, Artificial Intelligence, Advance Data Structures, Graph Data Mining.
-                </section> 
-
-            </p>
-            
-            <p>TO know more about my experience please switch to the experience tab</p>
-            
-            
-		</div>
-	</script>
-	
-	<script type="text/ng-template" id="experience.html">
-		<div class="experience">
-			<p>
-				<img ng-src="images/sapientnitro.png">
-			I have worked as Interactive developer L1 at Sapient Nitro from November 2014 till May 2016. 
-			My tasks and duties were as follows 
-			</p>
-			<ul>
-				<li>Specialized developer in Front-End domain for several multi-million dollar clients.</li>
-				<li>Developed and tested responsive components with cross browser compatibility for client’s webpages.</li>
-				<li>Reduced the maintenance effort required by automation of CSS for all clients’s modules using GRUNT and LESS</li>
-				<li>Managed Front-End developers and Point of Contact for all front end development</li>
-				<li>Additional Technologies Used - HTML5, AJAX, Javascript, JQuery, Bootstrap, NodeJS, AngularJS, CSS3</li>
-			</ul>
-			<p>
-				<img ng-src="images/cipm.jpg">
-			I have worked as Computer Programming Intern at Center for Integrated Pest Management, NCSU from September 2016 till December 2017. 
-			My tasks and duties were as follows 
-			</p>
-			<ul>
-				<li>Modifying and cleaning data.</li>
-				<li>Creating  and evaluating different machine learning techniques for prediction. </li>
-			</ul>
-			<p> Technologies used were Python and R </p>
-		</div>
-	</script>
-	<script type="text/ng-template" id="skills.html">
-		<div class="skills" ng-controller="skillsCtrl">
-			<p>I have broad experience across a wide spectrum of software programming languages,technology stacks, databases and tools.</p>
-			<ol>
-        	<li ng-repeat="ski in skills">{{ski.skill_name}}
-        		<ul>
-            		<li ng-repeat="skil in ski.skill" >{{skil.name}}</li>
-            </ul>
-          </li>
-      </ol>
-      <a href="documents/resume.pdf" download class="download">Download Resume</a>
-		</div>
-	</script>
-	
-	<script type="text/ng-template" id="projects.html">
-		<div id="viewThree">
-		</div>
-
-    		<div class="projects" ng-controller="projectsCtrl">
-        	<!--<ul>
-        			<li ng-repeat="cat in projects">{{cat.cate_name}}
-        				<ul>
-            				<li ng-repeat="pro in cat.pro" >{{pro.name}}<p>{{pro.desc}}</p>
-            				<a href="{{pro.url}}" ng-if="pro.url" target="_blank">{{pro.url}}</a></li>
-            			</ul>
-            		</li>
-        		</ul>-->
-        	<div class="projecttabs"> 
-        		<ul class="tabbedview">
-        			<li ng-class="{active:tab==0}">
-                        <a href ng-click="tab = tab==0 ? null : 0">All</a>
-                    </li>
-        			<li ng-class="{active:tab==1}"> 
-      					<a href ng-click="tab = tab==1 ? null : 1">Data Science</a>     
-   			 		</li>
-   			 		<li ng-class="{active:tab==2}"> 
-      					<a href ng-click="tab = tab==2 ? null : 2">Operating Systems</a>     
-   			 		</li> 
-   			 		<li ng-class="{active:tab==3}"> 
-      					<a href ng-click="tab = tab==3 ? null : 3">Data Bases</a>     
-   			 		</li> 
-   			 		<li ng-class="{active:tab==4}"> 
-      					<a href ng-click="tab = tab==4 ? null : 4">Web Services</a>     
-   			 		</li>  
-        		</ul>
-        		<section ng-show="tab === 0"> 
-        				<section ng-repeat="cat in projects">
-        					<h3>{{cat.cate_name}}</h3>
-        					<section ng-repeat="pro in cat.pro" >
-        						<h4>{{pro.name}}</h4>
-        						<p>{{pro.desc}}</p>
-        						<a href="{{pro.url}}" ng-if="pro.url" target="_blank">{{pro.url}}</a>
-        					</section>
-            			</section>
-        	
-        		</section> 
-        		<section ng-repeat="cat in projects" ng-show="tab === {{cat.index}}">
-        			<section ng-repeat="pro in cat.pro" >
-        				<h4>{{pro.name}}</h4>
-        				<p>{{pro.desc}}</p>
-        				<a href="{{pro.url}}" ng-if="pro.url" target="_blank">{{pro.url}}</a>
-        			</section>
-        		</section>           
-       		 </div>
-
-         </div>
-	</script>
-	<script type="text/ng-template" id="contactme.html">
-		<div class="contactme" background="connect_background.jpg">
-			<h1>Lets Connect!!</h1>
-			<div>
-			<a href="https://www.facebook.com/rachit.thirani" target="_blank"><img src="images/fb.png"></a>
-			<a href="https://www.linkedin.com/in/rachitthirani/" target="_blank"><img src="images/linkedin.png"></a>
-			<a href="mailto:rachitthirani@yahoo.com"><img src="images/email.png" ></a>
-			<a href="tel:+19197716184"><img src="images/phone.jpg"</a>
-			<div>
-		</div>
-	</script>
+       
 </div>
-</body>
-</html>
+ </body>
+ </html>   
+  
+  
