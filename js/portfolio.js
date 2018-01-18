@@ -48,7 +48,7 @@ tab.controller('projectsCtrl', ['$scope', function ($scope,$http)
         index:1,
         pro:[{
                 name: "IMDb Rating and Gross Income Prediction",
-                desc: "Developed a tool for cleaning of IMDb’s data and prediction of rating for upcoming movies based on the attributes like actor’s rating, director’s rating, genre using machine learning techniques such as Decision tree, K means Clustering and Neural Networks.",
+                desc: "Developed a tool for cleaning of IMDb\'s data and prediction of rating for upcoming movies based on the attributes like actor’s rating, director’s rating, genre using machine learning techniques such as Decision tree, K means Clustering and Neural Networks.",
                 tech : "R,Decision Tree, Kmeans, CLustering"
             }, 
             {
