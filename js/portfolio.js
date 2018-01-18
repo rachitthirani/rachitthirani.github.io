@@ -188,7 +188,7 @@ tab.controller('skillsCtrl', ['$scope', function ($scope,$http)
                 name:"Pandas"
             },
             {
-                name:"Mathplotlib"
+                name:"Matplotlib"
             },
             {
                 name:"NLTK"
