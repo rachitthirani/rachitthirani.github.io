@@ -378,14 +378,14 @@ ul.tabbedview li:hover{
       font-size:25px;
     }
     .projects h3 {
-      font-size: :25px;
+      font-size :25px;
     }
     .projects h4 {
       font-size: 23px;
       margin:10px;
     }
   
-    .projects h4 +p +{
+    .projects h4 +p {
       font-size:22px;
       margin:15px;
 
@@ -446,20 +446,20 @@ ul.tabbedview li:hover{
       padding-top:20px;
     }
     .projects h3 {
-      font-size: :13px;
+      font-size :16px;
     }
     .projects h4 {
-      font-size: 12px;
+      font-size: 14px;
       margin:10px;
     }
   
-    .projects h4 +p +{
-      font-size:11px;
+    .projects h4 +p {
+      font-size:12px;
       margin:15px;
 
     }
     .projecttabs section section a{
-      font-size:11px;
+      font-size:12px;
     }
     .projecttabs section section {
       margin-bottom:15px;
