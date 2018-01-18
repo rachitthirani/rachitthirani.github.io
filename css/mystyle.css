@@ -109,7 +109,7 @@ overflow: hidden;
 
 .aboutMe >p img {
 	width: 105px;
-    float: left;
+    float: right;
     padding: 20px
 }
 .experience:before {
