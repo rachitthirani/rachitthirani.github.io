@@ -354,11 +354,11 @@ ul.tabbedview li:hover{
 
 @media only screen and (max-device-width: 500px) {
 	.experience >p {
-    font-size: 18px;
+    font-size: 13px;
     padding:15px;
 }
 .experience ul {
-    font-size: 15px;
+    font-size: 13px;
     margin-left: 60px;
 }
     ol >li {
@@ -391,9 +391,32 @@ ul.tabbedview li:hover{
     }
     .aboutMe >p {
       text-align: justify;
+      font-size: 14px;
     }
     .contactme {
       padding-top:20px;
+    }
+    .projects h3 {
+      font-size: :14px;
+    }
+    .projects h4 {
+      font-size: 13px;
+      margin:10px;
+    }
+    .projects h4 +p {
+      font-size:12px;
+
+    }
+    .projects h4 +p +{
+      font-size:12px;
+      margin:15px;
+
+    }
+    .projecttabs a{
+      font-size:12px;
+    }
+    .projecttabs section section {
+      margin-bottom:15px;
     }
 
 }
