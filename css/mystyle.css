@@ -328,7 +328,7 @@ ul.tabbedview li:hover{
 }
 
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 900px) {
 	.mainView {
 		margin-left:20px;
 		margin-right:20px;
@@ -346,10 +346,14 @@ ul.tabbedview li:hover{
 	ul.tabbedview {
 		padding:15px;
 		padding-bottom:5px;
+    top:110px;
 	}
 	.tabbedview + section {
-		top:14px;
+		top:55px;
 	}
+  .tabs >ul {
+    top:60px;
+  }
 }
 
 @media only screen and (max-device-width: 500px) {
