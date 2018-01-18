@@ -397,27 +397,29 @@ ul.tabbedview li:hover{
       padding-top:20px;
     }
     .projects h3 {
-      font-size: :14px;
+      font-size: :13px;
     }
     .projects h4 {
-      font-size: 13px;
+      font-size: 12px;
       margin:10px;
     }
     .projects h4 +p {
-      font-size:12px;
+      font-size:11px;
 
     }
     .projects h4 +p +{
-      font-size:12px;
+      font-size:11px;
       margin:15px;
 
     }
-    .projecttabs a{
-      font-size:12px;
+    .projecttabs section section a{
+      font-size:11px;
     }
     .projecttabs section section {
       margin-bottom:15px;
     }
-
+    .contactme:before{
+          background-position: 25%;
+    }
 }
 
