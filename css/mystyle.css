@@ -202,9 +202,10 @@ ol li ul {
 }
 
 ol >li {
-    display: inline-block;
+    display: inline-grid;
     padding-right:90px;
     padding-left:80px;
+    padding-bottom:10px;
 }
 
 .tabs >ul li:hover{
