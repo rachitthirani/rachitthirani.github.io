@@ -30,6 +30,13 @@
             <li ng-repeat="tab in tabs" 
                 ng-class="{active:isActiveTab(tab.url)}" 
                 ng-click="onClickTab(tab)">{{tab.name}}</li>
+                <li><a>&#9776;</a></li>
+        </ul>
+    <div id="myDropdown" class="tabs">
+    <ul>
+            <li ng-repeat="tab in tabs" 
+                ng-class="{active:isActiveTab(tab.url)}" 
+                ng-click="onClickTab(tab)">{{tab.name}}</li>
         </ul>
     </div> 
     <div class="mainView">
